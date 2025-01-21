@@ -1,0 +1,792 @@
+/*----REGLAS GENERALES----*/
+* {
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+    list-style: none ;
+    text-decoration: none ;
+    font-family: 'Barlow-light', sans-serif, arial ;
+}
+
+/*----RESET----*/
+html, body {
+    font-size: 10px ;
+    overflow-x: hidden ;
+}
+
+/*----FUENTES----*/
+@font-face {
+    font-family: 'Barlow-bold' ;
+    src: url('../fonts/Barlow-bold.ttf') format('truetype') ;
+}
+
+@font-face {
+    font-family: 'Barlow-light' ;
+    src: url('../fonts/Barlow-light.ttf') format('truetype') ;
+}
+
+@font-face {
+    font-family: 'Playfair-regular' ;
+    src: url('../fonts/Playfair-display-Regular.ttf') format('truetype') ;
+}
+
+/*----------------------------------------*/
+/*----HEADER----*/
+header {
+    nav {
+        @include composicionGral (row, space-between) ;
+        padding: 3.5rem 5rem ;
+        background: $fondoBoton ;
+        position: fixed ;
+        width: 100% ;
+        z-index: 4 ;
+        //**----MEDIA QUERY----**//
+        /***----DESDE ESTE PUNTO SE NOMBRARÁ 'MEDIA QUERY' AL INICIO DE CADA SECCIÓN
+        EN QUE SE APLICARÁ EL RESPONSIVE DE LA WEB PARA AYUDAR A LA SEPARACIÓN DE CONTENIDOS----***/
+        @include width-1205 {
+            padding: 3.5rem 2rem ;
+        }
+        @include width-1105 {
+            padding: 3.5rem 3.5rem ; 
+        }
+        @include width-1025 {
+            padding: 3rem 2rem;
+        }
+        @include width-995 {
+            align-items: end ;
+            padding: 3.5rem 3rem ;
+        }
+        @include width-376 {
+            padding: 3.5rem 2rem ;
+        }
+        .nav__logo-div {
+            display: grid ;
+            img {
+                width: 10vw ;
+                align-self: center ;
+                //**----MEDIA QUERY----**//
+                @include width-995 {
+                    width: 15vw ;
+                }
+                @include width-769 {
+                    width: 11rem ;
+                }
+                @include width-426 {
+                    width: 10rem ;
+                }
+            }
+        }
+        ul {
+            @include composicionGral (row, inherit) ;
+            gap: 2rem ;
+            align-items: center ;
+            //**----MEDIA QUERY----**//
+            @include width-1205 {
+                gap: 1.5rem ;
+            }
+            @include width-1105 {
+                gap: 1rem ;
+            }
+            @include width-995 {
+                display: none ;
+                position: absolute ;
+                height: 100vh ;
+                right: 0rem ;
+                top: -1rem ;
+                row-gap: 3rem ;
+                background: #111;
+                padding: 3rem 12rem 3rem 4rem;
+                z-index: 3 ;
+            }
+            li {
+                /***----PRIMER ELEMENTO DE LA LISTA SE QUITA PARA APARECER EN PANTALLAS PEQUEÑAS----***/
+                &:first-child {
+                    display: none ;
+                    .list-element__close-menu {
+                        color: $blancoPuro ;
+                        @include transformarFuente (3rem, translateX(-5px), inherit) ;  
+                    }
+                }
+                /***----ÍCONO DE BÚSQUEDA EN MAQUETADO WEB DESAPARECE PARA DAR LUGAR AL ÍCONO DE PANTALLAS
+                DIMENSIONES INFERIORES A '995px'----***/
+                &:last-child {
+                    @include width-995 {
+                        display: none ;
+                    }
+                }
+                a {
+                    @include transformarFuente (1.6rem, inherit, inherit) ;  
+                    font-weight: 600 ;
+                    color: $blancoPuro ;
+                    &:hover {       //----"HOVER" PARA ÍCONOS DE REDES SOCIALES----// 
+                        ion-icon {
+                            color: $hoverColorClaro ;
+                        }
+                    }
+                    @include width-995 {
+                        font-weight: normal ;
+                    }
+                    ion-icon {
+                        @include transformarFuente (2.6rem, translateY(4px), inherit) ; 
+                        //**----MEDIA QUERY----**// //PENDIENTE//
+                        @include width-995 { 
+                            color: #fff ;
+                            font-size: 3rem ;
+                        } 
+                    }
+                }
+                .list-element__search-icon {
+                    @include transformarFuente (2.6rem, translateY(4px), inherit) ; 
+                    margin-left: 2rem ;
+                    color: $blancoPuro ;
+                    cursor: pointer ;
+                    //**----MEDIA QUERY----**// 
+                    @include width-1042 {
+                        margin-left: 1rem ;
+                    }
+
+                }
+                .list-element__nav-link-newsletter {
+                    text-decoration: underline ;
+                }
+            } 
+        }
+        .nav__burger-menu-responsive {
+            /***----AQUÍ SE OCULTAN LOS ÍCONOS DE BÚSQUEDA Y MENÚ HAMBURGUESA PARA MOSTRARLOS POSTERIORMENTE
+            EN PANTALLAS DE DIMENSIONES INFERIORES A '995px'----***/
+            display: none ;
+            //**----MEDIA QUERY----**//
+            @include width-995 {
+                display: flex ;
+                gap: 2rem ;
+                font-size: 3rem ;
+                color: $blancoPuro ;
+            }
+        }
+    }
+}
+
+/*----------------------------------------*/
+//----SECCIÓN PRINCIPAL, CONTENIDO DE LA WEB----//
+main {
+    .main__main-container {
+        .main-container__magz-titles-section {
+            margin-top: 11.5rem ;
+            display: grid ;
+            grid-template-columns: 1fr 1fr ;
+            height: 73rem ;
+            background: linear-gradient(to left, $gradienteOscuro, $gradienteClaro 20%, $blancoPuro 60%) ; 
+            //**----MEDIA QUERY----**//
+            @include width-1105 {
+                margin-top: 10rem ;
+                height: 65rem ; 
+            }
+            @include width-980 {
+                height: 61rem;
+            }
+            @include width-769 {
+                margin-top: 7rem ;
+                grid-template-columns: 50% 50% ;
+                height: 60rem ;
+            }
+            @include width-762 {
+                height: 62rem ;
+            }
+            @include width-650 {
+                margin-top: 8rem;
+                grid-template-columns: 1fr;
+                height: 123rem;
+            }
+            @include width-426 {
+                margin-top: 10rem ;
+                grid-template-columns: 1fr ;
+                height: 107rem ;
+            }
+            .magz-titles-section__magazines {
+                position: relative;
+                width: 71rem ;
+                height: 70rem ;
+                margin-left: 12rem ;
+                //**----MEDIA QUERY----**//
+                @include width-1346 {
+                    width: 65rem;
+                    margin-left: 8rem;
+                }
+                @include width-1245 {
+                    width: 62rem;
+                    margin-left: 7rem;
+                }
+                @include width-1205 {
+                    width: 60rem;
+                    margin-left: 5rem;
+                }
+                @include width-1138 {
+                    width: 57rem;
+                    margin-left: 4rem;
+                }
+                @include width-1105 {
+                    width: 59rem ;
+                    margin-left: 8rem ;
+                }
+                @include width-1025 {
+                    width: 54rem;
+                }
+                @include width-980 {
+                    width: 47rem;
+                }
+                @include width-932 {
+                    width: 45rem;
+                }
+                @include width-913 {
+                    width: 38rem;
+                    margin-left: 5rem ;
+                }
+                @include width-769 {
+                    width: 35rem ;
+                    margin-left: 3rem ;
+                }
+                @include width-650 {
+                    height: 66rem ;
+                }
+                @include width-615 {
+                    height: 56rem ;
+                }
+                @include width-575 {
+                    height: 50rem ;
+                }
+                @include width-562 {
+                    height: 48rem;
+                }
+                @include width-440 {
+                    height: 37rem;
+                }
+                @include width-426 {
+                    height: 47rem ;
+                    margin-left: 3.5rem ;
+                }
+                @include width-376 {
+                    margin-left: 1.7rem ;
+                }
+                .magazines__magazine-01 {
+                    img {
+                        @include imagenPosicion (6rem, 25rem) ; 
+                        &:hover {
+                            z-index: 3 ;
+                        }
+                        //**----MEDIA QUERY----**//
+                        @include width-1105 {
+                            top: 6.6rem ;
+                        }
+                        @include width-1025 {
+                            left: 22rem ;
+                        }
+                        @include width-980  {
+                            left: 18rem ;
+                        }
+                        @include width-913 {
+                            left: 15rem;
+                        }
+                        @include width-769 {
+                            width: 35vw ;
+                            left: 8rem ;
+                        }
+                        @include width-650 {
+                            width: 60vw ;
+                            left: 20rem ;
+                        }
+                        @include width-615 {
+                            left: 18rem ;
+                        }
+                        @include width-575 {
+                            left: 16rem ;
+                        }
+                        @include width-562 {
+                            left: 13rem ;
+                        }
+                        @include width-440 {
+                            left: 12rem;
+                        }
+                        @include width-426 {
+                            width: 65vw;
+                            top: 3.6rem ;
+                            left: 8rem;
+                        }
+                        @include width-376 {
+                            width: 70vw ;
+                        }
+                    }
+                }
+                .magazines__magazine-02 { 
+                    img { 
+                        @include imagenPosicion (14rem, inherit) ;
+                        //**----MEDIA QUERY----**//
+                        @include width-769 {
+                            width: 35vw ;
+                            top: 20rem ;
+                        }
+                        @include width-650 {
+                            width: 60vw;
+                        }
+                        @include width-426 {
+                            width: 65vw;
+                            top: 17rem ;
+                        }
+                        @include width-376 {
+                            width: 70vw ;
+                        }
+                    }
+                }
+            }
+            .magz-titles-section__titles-n-form {
+                @include composicionGral (column, center) ;
+                width: 85% ;
+                align-items: center ;
+                padding: 4rem ;
+                //**----MEDIA QUERY----**//
+                @include width-1407 {
+                    width: 95%;
+                }
+                @include width-1166 {
+                    width: 100%;
+                }
+                @include width-1105 {
+                    justify-content: start ;
+                }
+                @include width-769 {
+                    width: 100%;
+                }
+                @include width-650 {
+                    margin: 0 auto ;
+                    width: 90%;
+                }
+                @include width-426 {
+                    width: 100% ;
+                    margin-top: 2rem ;
+                    padding: 3rem ;
+                }
+                @include width-376 {
+                    width: 100% ;
+                    margin-top: -2rem ;
+                    padding: 2rem ;
+                }
+                h1 {
+                    @include transformarFuente (5rem, inherit, center) ;
+                    span {
+                        color: $fondoBoton ;
+                        font-family: inherit ;
+                    }
+                    //**----MEDIA QUERY----**//
+                    @include width-1105 {
+                        font-size: 3rem ;
+                    }
+                }
+                h2 {
+                    @include transformarFuente (3rem, inherit, center) ;
+                    line-height: 1.5 ;
+                    margin-bottom: 3rem ;
+                    //**----MEDIA QUERY----**//
+                    @include width-1105 {
+                        font-size: 2.4rem ;
+                    }
+                    @include width-674 {
+                        margin-bottom: 1.5rem ;
+                    }
+                    @include width-650 {
+                        margin-bottom: 2rem ;
+                    }
+                }
+                form {
+                    width: 80% ;
+                    @include composicionGral (column, inherit) ;
+                    //**----MEDIA QUERY----**//
+                    @include width-1105 {
+                        width: 100%;
+                    }
+                    @include width-426 {
+                        width: 100%;
+                    }
+                    @include width-376 {
+                        width: 100% ;
+                    }
+                    legend {
+                        @include transformarFuente (2.5rem, inherit, center) ;
+                        margin-bottom: 2rem ;
+                        color: $fondoBoton ;
+                        //**----MEDIA QUERY----**//
+                        @include width-674 {
+                            margin-bottom: 1rem ;
+                        }
+                        @include width-650 {
+                            margin-bottom: 2rem ;
+                        }
+                    }
+                    label {
+                        font-size: 1.8rem ;
+                        margin-bottom: 0.5rem ;
+                    }
+                    input {
+                        width: 100% ;
+                        font-size: 1.8rem ;
+                        margin: 0 auto ;
+                        padding: 1rem ;
+                        margin-bottom: 2rem ;
+                        //**----MEDIA QUERY----**//
+                        @include width-1105 {
+                            font-size: 1.6rem ;
+                            margin-bottom: 1rem ;
+                        }
+                        @include width-674 {
+                            margin-bottom: 0.5rem;
+                        }
+                        @include width-650 {
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                    .form__submit {
+                        margin-top: 2rem ;
+                        color: #fff ;
+                        background: $fondoBoton ;
+                        border: none ;
+                        width: 75% ;
+                        cursor: pointer ;
+                        //**----MEDIA QUERY----**//
+                        @include width-674 {
+                            margin-top: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .main-container__benefits-section {
+            background-image: url(../img/model-image-background.webp) ;
+            height: 100% ;
+            padding: 5rem 12rem ;
+            //**----MEDIA QUERY----**//
+            @include width-1105 {
+                background-image: url(../img/model-image-background-1.2.jpg) ;
+                background-size: cover ;
+                margin-top: 0px ;
+                padding: 5rem 8rem ;
+            }
+            @include width-913 {
+                padding: 5rem 5rem ;
+            }
+            @include width-769 {
+                padding: 5rem 3rem ;
+            }
+            @include width-650 {
+                background-position: top ;
+            }
+            @include width-426 {
+                background-blend-mode: color-dodge ; /* Combina la imagen con el color (background-color) */
+                background-color: #838383 ;
+                background-position: center ;
+                padding: 4rem 3rem ;
+            }
+            @include width-376 {
+                padding: 4rem 2rem ;
+            }
+            h1 {
+                font-size: 1.8rem ;
+                text-transform: uppercase ;
+                color: $fondoBoton ;
+                margin-bottom: 1rem ;
+            }
+            h2 {
+                width: 50% ;
+                margin-bottom: 4rem ;
+                @include transformarFuente (4rem, inherit, inherit) ;
+                //**----MEDIA QUERY----**//
+                @include width-1105 {
+                    font-size: 3rem ;
+                }
+                @include width-426 {
+                    font-size: 2.6rem ;
+                    width: 100% ;
+                }
+            }
+            ul {
+                li{
+                    width: 50% ;
+                    line-height: 1.5 ;
+                    margin-bottom: 2rem ;
+                    @include transformarFuente (2.4rem, inherit, inherit) ;
+                    //**----MEDIA QUERY----**//
+                    @include width-1105 {
+                        font-size: 2rem ;
+                    }
+                    @include width-769 {
+                        font-size: 1.8rem ;
+                    }
+                    @include width-426 {
+                        width: 100% ;
+                    }
+                }
+            }
+        }
+        .main-container__comments-section {
+            padding: 5rem 12rem ;
+            //**----MEDIA QUERY----**//
+            @include width-1105 {
+                padding: 5rem 8rem ;
+            }
+            @include width-913 {
+                padding: 5rem 5rem ;
+            }
+            @include width-769 {
+                padding: 5rem 3rem ;
+            }
+            @include width-426 {
+                padding: 4rem 3rem ;
+            }
+            @include width-376 {
+                padding: 4rem 2rem ;
+            }
+            h1 {
+                font-size: 1.8rem ;
+                text-transform: uppercase ;
+                color: $fondoBoton ;
+                margin-bottom: 1rem ;
+            }
+            h2 {
+                @include transformarFuente (4rem, inherit, inherit) ;
+                margin-bottom: 5rem ;
+                //**----MEDIA QUERY----**//
+                @include width-1105 {
+                    font-size: 3rem ;
+                }
+                @include width-426 {
+                    font-size: 2.6rem ;
+                }
+            }
+            .comments-section__comments-users {
+                display: grid ;
+                grid-template-columns: repeat(2, 1fr) ;
+                gap: 7rem ;
+                padding-bottom: 6rem ;
+                //**----MEDIA QUERY----**//
+                @include width-769 {
+                    gap: 4rem;
+                }
+                @include width-650 {
+                    grid-template-columns: 1fr;
+                }
+                article {
+                    @include composicionGral (column, inherit) ;
+                    gap: 1rem ;
+                    font-size: 1.8rem ;
+                    padding: 3rem ;
+                    box-shadow: 0 0 8px $hoverColorClaro ;
+                    //**----MEDIA QUERY----**//
+                    @include width-769 {
+                        font-size: 1.6rem ;
+                        padding: 2.6rem ;
+                    }
+                    .person-commentary__user-data, 
+                    .user-data__user-img-name {
+                        @include composicionGral (row, space-between) ;
+                    }
+                    .user-data__user-img-name {
+                        @include composicionGral (row, inherit) ;
+                        align-items: center ;
+                        gap: 2rem ;
+                        //**----MEDIA QUERY----**//
+                        @include width-769 {
+                            gap: 1.5rem ;
+                        }
+                        img {
+                            width: 6rem ;
+                            border-radius: 50% ;
+                        }
+                    }
+                    .user-data__date {
+                        //**----MEDIA QUERY----**//
+                        @include width-769 {
+                            font-size: 1.2rem ;
+                        }
+                    }
+                    .person-commentary__grade {
+                        margin-bottom: 0.5rem ;
+                        color: $fondoBoton ;
+                    }
+                    .person-commentary__commentary {
+                        p {
+                            border-top: 1px solid $bordeFooter ;
+                            padding: 2rem 0 0 0 ;
+                            line-height: 1.7 ;
+                            font-family: "Playfair-regular", sans-serif, arial ;
+                        }
+                    }
+                }
+                .comments-users__person-last-commentary {
+                    grid-column: 1/3 ;
+                    margin: 0 27% ;
+                    @include width-650 {
+                        grid-column: 1 ;
+                        margin: 0 0 ;
+                    }
+                }
+            }
+            .comments-section__button-suscribe {
+                padding: 3rem 0 ;
+                border-top: 1px solid $bordeFooter ;
+                h3 {
+                    @include transformarFuente (4rem, inherit, center) ;
+                    margin-bottom: 4rem ;
+                    //**----MEDIA QUERY----**//
+                    @include width-1105 {
+                        font-size: 3rem ;
+                    }
+                    @include width-426 {
+                        font-size: 2.6rem ;
+                    }
+                }
+                a {                
+                    @include composicionGral (row, center) ;
+                    button {
+                        color: $blancoPuro ;
+                        background: $fondoBoton ;
+                        font-size: 1.8rem ;
+                        padding: 1rem 10rem ;
+                        border: none ;
+                        cursor: pointer ;
+                    }
+                }
+            }
+        }
+    }
+}
+footer {
+    background: $fondoFooter ;
+    .footer__footer-container {
+        .footer-container__footer-section {
+            @include composicionGral (row, inherit) ;
+            padding: 4rem 12rem ;
+            //**----MEDIA QUERY----**//
+            @include width-1105 {
+                padding: 4rem 8rem ;
+            }
+            @include width-769 {
+                padding: 4rem 3rem;
+            }
+            @include width-562 {
+                flex-direction: column ;
+            }
+            @include width-376 {
+                padding: 4rem 2rem ;
+            }
+            .footer-section__logo-footer {
+                padding: 2.5rem ;
+                //**----MEDIA QUERY----**//
+                @include width-1105 {
+                    padding: 2.5rem 0 ;
+                }
+                img {
+                    width: 19vw ;
+                    margin-right: 8rem ;
+                    //**----MEDIA QUERY----**//
+                    @include width-769 {
+                        width: 18vw ;
+                        margin-right: 4rem ;
+                    }
+                    @include width-426 {
+                        width: 36vw ;
+                        margin-right: 0 ;
+                    }
+                }
+            }
+            .footer-section__other-links {
+                @include composicionGral (row, inherit) ;
+                gap: 8rem ;
+                //**----MEDIA QUERY----**//
+                @include width-769 {
+                    gap: 4rem ;
+                }
+                @include width-376 {
+                    gap: 3.6rem ;
+                }
+                div {
+                    ul {
+                        line-height: 2 ;
+                        font-size: 1.6rem ;
+                        li {
+                            &:first-child {
+                                font-weight: bold ;
+                                margin-bottom: .5rem ;
+                                font-family: "Playfair-regular", sans-serif, arial ;
+                                color: $letrasFooter ;
+                            }
+                            //**----MEDIA QUERY----**//
+                            @include width-426 {
+                                font-size: 1.4rem ;
+                            }
+                            a {
+                                font-family: "Playfair-regular", sans-serif, arial ;
+                                color: $letrasFooter ;
+                                &:hover {
+                                    color: $hoverColorOscuro ;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-container__socials-n-rights {
+            @include composicionGral (row, space-between) ;
+            margin: 0 14.5rem ;
+            padding: 4rem 0 8rem ;
+            border-top: 1px solid $bordeFooter ;
+            //**----MEDIA QUERY----**//
+            @include width-1105 {
+                margin: 0 8rem ;
+            }
+            @include width-769 {
+                margin: 0 3rem ;
+            }
+            @include width-426 {
+                flex-direction: column ;
+                gap: 1.5rem ;
+                padding-bottom: 4rem ;
+            }
+            @include width-376 {
+                margin: 0 2rem ;
+            }
+            p {
+                color: $letrasFooter ;
+                @include transformarFuente (1.4rem, inherit, inherit) ;
+                //**----MEDIA QUERY----**//
+                @include width-1105 {
+                    width: 70% ;
+                    font-size: 1.4rem ;
+                    line-height: 1.3 ; 
+                }
+                @include width-1025 {
+                    font-size: 1.2rem ;
+                }
+                @include width-426 {
+                    width: 85% ;
+                }
+            }
+            .socials-n-rights__socials {
+                @include composicionGral (row, auto) ;
+                @include transformarFuente (2.8rem, translateY(-7px), inherit) ;
+                gap: 2.5rem ;
+                //**----MEDIA QUERY----**//
+                @include width-1105 {
+                    transform: translateY(0) ;
+                    gap: 2rem ;
+                }
+                @include width-426 {
+                    font-size: 2.4rem ;
+                }
+                a {
+                    color: $letrasFooter ;
+                    &:hover {
+                        color: $hoverColorClaro ;
+                    }
+                }
+            }
+        }
+    }
+}

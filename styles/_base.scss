@@ -1,0 +1,135 @@
+//----VARIABLES, COLORES----//
+//--FONDOS--//
+$fondoBoton: #ED1E1E ;
+$fondoFooter: #FBFBFB ;
+$bordeFooter: #DDD ;
+$gradienteOscuro: #838383 ;
+$gradienteClaro: #BBBBBB;
+
+//--LETRAS--//
+$letrasFooter: #5E5E5E ;
+$blancoPuro: #FFF ;
+
+//--HOVER--//
+$hoverColorOscuro: #333 ;
+$hoverColorClaro: #CCC ;
+
+//----MIXINS----//
+//--PARA LA COMPOSICIÓN DE ALGUNOS BLOQUES--//
+@mixin composicionGral ($flexDireccion, $justifyContentValue) {
+    display: flex ;
+    flex-direction: $flexDireccion ;
+    justify-content:  $justifyContentValue ;
+}
+    //--PARA LAS FUENTES, ALINEACIÓN Y CENTRADO DE TEXTOS Y ELEMENTOS--//
+@mixin transformarFuente ($fontSize, $transform, $textAlign) {
+    font-size: $fontSize ;
+    transform: $transform ;
+    text-align: $textAlign ;
+    font-family: 'Playfair-regular', sans-serif, arial ;
+}
+    //--PARA LA POSICIÓN DE LOS "MAGAZINES"--//
+@mixin imagenPosicion ($top, $left) {
+    position: absolute ; 
+    width: 30vw ;
+    top: $top ;
+    left: $left ;
+    z-index: 2 ;
+} 
+
+//----MEDIA QUERY----//
+//--SECCIÓN DE TÍTULOS Y FORMULARIO--//
+
+/***----AQUÍ SE ESPECIFICAN DIMENSIONES PARA DISTINTAS PANTALLAS NOMBRANDO 
+A CADA 'mixin' POR EL ANCHO DE LA PANTALLA EN QUE SE INICIARÍA SU APLICACIÓN----***/
+@mixin width-1407 {
+    @media screen and (max-width: 1407px) { @content } ;
+}
+    //--PARA LA SECCIÓN DE "MAGAZINES"--//
+@mixin width-1346 { 
+    @media screen and (max-width: 1346px) { @content } ;
+}
+    //--PARA LA SECCIÓN DE "MAGAZINES"--//
+@mixin width-1245 { 
+    @media screen and (max-width: 1245px) { @content } ;
+}
+    //--PARA EL NAV Y "MAGAINES"--//
+@mixin width-1205 { 
+    @media screen and (max-width: 1205px) { @content } ;
+}
+    //--PARA LOS TÍTULOS Y FORMULARIO--//
+@mixin width-1166 { 
+    @media screen and (max-width: 1166px) { @content } ;
+}
+    //--PARA LOS "MAGAZINES"--//
+@mixin width-1138 { 
+    @media screen and (max-width: 1138px) { @content } ;
+}
+    //--PARA CADA APARTADO EN LA WEB **SEGUNDO MEDIA QUERY MÁS EXTENSO**--//
+@mixin width-1105 { 
+    @media screen and (max-width: 1105px) { @content } ;
+}
+    //--PARA --//
+@mixin width-1042 { 
+    @media screen and (max-width: 1042px) { @content } ;
+}
+    //--PARA LAS IMÁGENES DE LOS "MAGAZINES" Y EL NAV--//
+@mixin width-1025 { 
+    @media screen and (max-width: 1025px) { @content } ;
+}
+    //--PARA EL HEADER--//
+@mixin width-995 { 
+    @media screen and (max-width: 995px) { @content } ;
+}
+    //--PARA LAS IMÁGENES DE LOS "MAGAZINES"--//
+@mixin width-980 { 
+    @media screen and (max-width: 980px) { @content } ;
+}
+    //--PARA LAS IMÁGENES DE LOS "MAGAZINES"--//
+@mixin width-932 { 
+    @media screen and (max-width: 932px) { @content } ;
+}
+    //--PARA LAS IMÁGENES DE LOS "MAGAZINES", SECCIÓN DE BENEFICIOS Y COMENTARIOS--//
+@mixin width-913 { 
+    @media screen and (max-width: 913px) { @content } ;
+}
+    //--PARA CADA APARTADO EN LA WEB **MEDIA QUERY MÁS EXTENSO**--//
+@mixin width-769 { 
+    @media screen and (max-width: 769px) { @content } ;
+}
+    //--PARA EL CONTENEDOR DE LOS "MAGAZINES"--//
+@mixin width-762 { 
+    @media screen and (max-width: 674px) { @content } ;
+}
+    //--PARA LOS TÍTULOS Y FORMULARIO"--//
+@mixin width-674 { 
+    @media screen and (max-width: 674px) { @content } ;
+}
+    //--PARA LAS "MAGAZINES", TÍTULOS Y COMENTARIOS--//
+@mixin width-650 { 
+    @media screen and (max-width: 650px) { @content } ;
+}
+    //--PARA LAS IMÁGENES DE LOS "MAGAZINES"--//
+@mixin width-615 { 
+    @media screen and (max-width: 615px) { @content } ;
+}
+    //--PARA LAS IMÁGENES DE LOS "MAGAZINES"--//
+@mixin width-575 {
+    @media screen and (max-width: 575px) { @content } ;
+}
+    //--PARA LAS IMÁGENES DE LOS "MAGAZINES"--//
+@mixin width-562 { 
+    @media screen and (max-width: 562px) { @content } ;
+}
+    //--PARA LAS IMÁGENES DE LOS "MAGAZINES"--//
+@mixin width-440 { 
+    @media screen and (max-width: 440px) { @content } ;
+}
+    //--PARA LAS PANTALLAS GRANDES DE CELULAR--//
+@mixin width-426 { 
+    @media screen and (max-width: 426px) { @content } ;
+}
+    //--PARA PANTALLAS MEDIANAS DE CELULAR--//
+@mixin width-376 {
+    @media screen and (max-width: 376px) { @content } ;
+}
