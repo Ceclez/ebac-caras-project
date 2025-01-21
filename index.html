@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--RESET-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.min.css" 
+    integrity="sha512-gCJkkUMGTe73+FMwog6gIBCVJIMXRoc21l6/IPCuzxCex/1sxvO8ctb6Zd4/WWs2UMqmtnDrAdhJht5pEY0LXg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--FUENTES-->
+    <link rel="stylesheet" href="fonts/Barlow-bold.ttf">
+    <link rel="stylesheet" href="fonts/Barlow-light.ttf">
+    <link rel="stylesheet" href="fonts/Playfair-display-Regular.ttf">
+    <!--ESTILOS-->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!--JS-->
+    <script src="js/menu.js" defer></script>
+    <!--TÍTULO DEL PROYECTO-->
+    <title>CARAS-Landing Page</title>
+</head>
+<body>
+    <header class="header__header">
+       <nav class="header__nav">
+           <div class="nav__logo-div">
+                <img src="img/Logo 2.png" alt="logo caras 01" class="logo-div__logo-caras">
+           </div>
+
+           <ul class="nav__nav-ul">
+                <li id="close-menu" class="nav-ul__list-element"> <!--CAMBIAR EN JavaScritp-->
+                    <ion-icon name="close" class="list-element__close-menu"></ion-icon>
+                </li>
+                <li class="nav-ul__list-element"><a href="#" class="list-element__nav-link">Entretenimiento</a></li>
+                <li class="nav-ul__list-element"><a href="#" class="list-element__nav-link">Realeza</a></li>
+                <li class="nav-ul__list-element"><a href="#" class="list-element__nav-link">Moda</a></li>
+                <li class="nav-ul__list-element"><a href="#" class="list-element__nav-link">Lifestyle</a></li>
+                <li class="nav-ul__list-element"><a href="#" class="list-element__nav-link">Personalidades</a></li>
+                <li class="nav-ul__list-element"><a href="#" class="list-element__nav-link">Arte y Cultura</a></li>
+                <li class="nav-ul__list-element"><a href="#" class="list-element__nav-link">Revista</a></li>
+                <li class="nav-ul__list-element"><a href="#" class="list-element__nav-link list-element__nav-link-newsletter">Newsletter</a></li>
+                <li class="nav-ul__list-element"><a href="https://es-la.facebook.com/Revista.Caras/" class="list-element__nav-link">
+                    <ion-icon name="logo-facebook" class="nav-link__logo-facebook"></ion-icon></a>
+                </li>
+                <li class="nav-ul__list-element"><a href="https://www.instagram.com/revistacaras/" class="list-element__nav-link">
+                    <ion-icon name="logo-instagram" class="nav-link__logo-instagram"></ion-icon></a>
+                </li>
+                <li class="nav-ul__list-element"><a href="https://x.com/carasmexico" class="list-element_nav-link">
+                    <ion-icon name="logo-twitter" class="nav-link__logo-twitter"></ion-icon></a>
+                </li>
+                <li class="nav-ul__list-element">
+                    <ion-icon name="search-sharp" class="list-element__search-icon"></ion-icon>
+                    <!--<input type="search">--> <!--BARRA DE BÚSQUEDA QUE SE ABRIRÍA CON UN CLIC-->
+                </li>
+            </ul>
+            <!--MENÚ HAMBURGUESA E ÍCONO DE BÚSQUEDA OCULTOS-->
+            <div class="nav__burger-menu-responsive" id="nav__burger-menu-responsive"> 
+                <ion-icon name="search-sharp" class="burger-menu-responsive__search-icon" id="burger-menu-responsive__search-icon"></ion-icon>
+                <!--<input type="search">--> 
+                <ion-icon name="menu" class="burger-menu-responsive__burger-menu" id="burger-menu"></ion-icon>
+            </div>
+       </nav>
+    </header>
+
+    <main class="main__main">
+        <div class="main__main-container">
+            <!--SECCIÓN DE TÍTULOS, REGISTRO E IMÁGENES DE REVISTA CARAS-->
+            <section class="main-container__magz-titles-section">
+                <section class="magz-titles-section__magazines">
+                    <div class="magazines__magazine-01">
+                        <img src="img/revista-caras-04.jpg" alt="imagen de una revista de CARAS" class="magazine-01__img">
+                    </div>
+                    
+                    <div class="magazines__magazine-02">
+                        <img src="img/revista-caras-03.jpg" alt="imagen de una revista de CARAS" class="magazine-02__img">
+                    </div>
+                </section>
+
+                <section class="magz-titles-section__titles-n-form">
+                    <h1 class="titles-n-form__title">
+                        <span class="title__strong-title">CARAS</span> Newsletter
+                    </h1>
+                    <h2 class="titles-n-form__subtitle">Suscríbete al newsletter y mantente al tanto de todo lo relacionado con el mundo de tus famosos favoritos</h2>
+
+                    <form action="" method="" class="titles-n-form__form">
+                        <legend class="form__legend">¡Suscríbete ya!</legend>
+
+                        <label for="name" class="form__name-label">Nombre</label>
+                        <input type="text" id="form__name-input" class="form__name-input" name="name" required> 
+
+                        <label for="email" class="form__mail-label">Correo</label>
+                        <input type="email" id="form__email-input" class="form__email-input" name="email" required> 
+
+                        <input type="submit" id="form__submit" class="form__submit" value="Suscribirse">
+                    </form>
+                </section>
+            </section>
+            <!--SECCIÓN DE BENEFICIOS A LA SUSCRIPCIÓN DEL NEWSLETTER-->
+            <section class="main-container__benefits-section">
+                <h1 class="benefits-section__title">Beneficios de la suscripción</h1>
+                <h2 class="benefits-section__subtitle">Suscríbete y disfruta de gran variedad de beneficios exclusivos </h2>
+
+                <ul class="benefits-section__benefits-ul">
+                    <li class="benefits-ul__list-element">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae eveniet suscipit consequatur commodi sunt reiciendis? Vero id totam commodi temporibus quisquam!
+                    </li>
+                    <li class="benefits-ul__list-element">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quasi nulla perspiciatis harum suscipit. Quaerat voluptatem fuga harum voluptatum exercitationem. Eius commodi aspernatur atque molestiae, officiis eum enim corrupti alias.
+                    </li>
+                    <li class="benefits-ul__list-element">
+                        Lorem ipsum dolor, sit quidem omnis, numquam rerum veniam natus ex repellat officia obcaecati ea repellat!
+                    </li>
+                    <li class="benefits-ul__list-element">
+                        ¡Descuentos, y mucho más, no lo dudes, suscríbete!
+                    </li>
+                </ul>
+            </section>
+
+            <!--SECCIÓN DE TESTIMONIOS DE USUARIOS-->
+            <section class="main-container__comments-section">
+                <h1 class="comments-section__title">Testimonios de usuarios</h1>
+                <h2 class="comments-section__subtitle">Esto es lo que dicen algunos de nuestros usuarios ya suscritos</h2>
+
+                <section class="comments-section__comments-users">
+                    <!--SECCIÓN, ARTÍCULO, COMENTARIO DE USUARIOS-->
+                    <article class="comments-users__person-commentary">
+                        <div class="person-commentary__user-data">
+                            <div class="user-data__user-img-name">
+                                <img src="img/testimonial-3.1.jpg" alt="imagen de usuario en sección de testimonios o comentarios" class="user-img-name__img">
+                                <p class="user-img-name__name">Leo Messi</p>
+                            </div>
+                            <span class="user-data__date">14-Dic-2028</span>
+                        </div>
+                        <div class="person-commentary__grade">
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star-half" class="grade__star-icon grade__halfstar-icon"></ion-icon>
+                        </div>
+                        <div class="person-commentary__commentary">
+                            <p class="commentary__commentary">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, odit, explicabo rerum reiciendis voluptate incidunt fuga officia maxime eveniet atque quia illum, maiores tempora quo ea ipsam. Ratione, eius ab.
+                                Sapiente quibusdam quidem rem laudantium, quia quisquam voluptatum sint officiis cupiditate adipisci nisi minima ullam alias amet aliquid tempore similique tenetur.
+                            </p>
+                        </div>
+                    </article>    
+
+                    <!--SECCIÓN, ARTÍCULO, COMENTARIO DE USUARIOS-->
+                    <article class="comments-users__person-commentary">
+                        <div class="person-commentary__user-data">
+                            <div class="user-data__user-img-name">
+                                <img src="img/testimonial-4.1.jpg" alt="imagen de usuario en sección de testimonios o comentarios" class="user-img-name__img">
+                                <p class="user-img-name__name">Papa Emeritus III</p>
+                            </div>
+                            <span class="user-data__date">25-Ago-2025</span>
+                        </div>
+                        <div class="person-commentary__grade">
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                        </div>
+                        <div class="person-commentary__commentary">
+                            <p class="commentary__commentary">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, odit, explicabo rerum reiciendis voluptate incidunt fuga officia maxime eveniet atque quia illum, maiores tempora quo ea ipsam. Ratione, eius ab.
+                                Sapiente quibusdam quidem rem laudantium, quia quisquam voluptatum sint officiis cupiditate adipisci nisi minima ullam alias amet aliquid tempore similique tenetur.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!--SECCIÓN, ARTÍCULO, COMENTARIO DE USUARIOS-->
+                    <article class="comments-users__person-commentary comments-users__person-last-commentary">
+                        <div class="person-commentary__user-data">
+                            <div class="user-data__user-img-name">
+                                <img src="img/testimonial-5.1.jpg" alt="imagen de usuario en sección de testimonios o comentarios" class="user-img-name__img">
+                                <p class="user-img-name__name">Michael Jackson</p>
+                            </div>
+                            <span class="user-data__date">08-Mar-2027</span>
+                        </div>
+                        <div class="person-commentary__grade">
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                            <ion-icon name="star" class="grade__star-icon"></ion-icon>
+                        </div>
+                        <div class="person-commentary__commentary">
+                            <p class="commentary__commentary">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, odit, explicabo rerum reiciendis voluptate incidunt fuga officia maxime eveniet atque quia illum, maiores tempora quo ea ipsam. Ratione, eius ab.
+                                Sapiente quibusdam quidem rem laudantium, quia quisquam voluptatum sint officiis cupiditate adipisci nisi minima ullam alias amet aliquid tempore similique tenetur.
+                            </p>
+                        </div>
+                    </article>  
+                </section>
+                
+                <div class="comments-section__button-suscribe">
+                    <h3 class="button-suscribe__comments-section">No lo pienses más, ¡suscríbete!</h3>
+
+                    <a href="#" class="button-suscribe__suscribe-link">
+                        <button class="suscribe-link__button">Suscribirse</button>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!--SECCIÓN DEL FOOTER-->
+    <footer class="footer__footer">
+        <div class="footer__footer-container">
+            <section class="footer-container__footer-section">
+                <section class="footer-section__logo-footer">
+                    <img src="img/Logo 1.png" alt="logo caras 01" class="logo-footer__logo-caras">
+                </section>
+        
+                <section class="footer-section__other-links">
+                    <div class="other-links__other-links-01">
+                        <ul class="other-links-01__ul-footer">
+                            <li class="ul-footer__list-element">Descubre más</li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Entretenimiento</a></li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Realeza</a></li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Moda</a></li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Personalidades</a></li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Arte y Cultura</a></li>
+                        </ul>
+                    </div>
+                    <div class="other-links__other-links-02">
+                        <ul class="other-links-02__ul-footer">
+                            <li class="ul-footer__list-element">Revista</li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">App Store</a></li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Edición impresa</a></li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Magzter</a></li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Pressreader</a></li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Zinio</a></li>
+                        </ul>
+                    </div>
+                    <div class="other-links__other-links-03">
+                        <ul class="other-links-03__ul-footer">
+                            <li class="ul-footer__list-element">Legales</li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Contacto</a></li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Aviso de privacidad</a></li>
+                            <li class="ul-footer__list-element"><a href="#" class="list-element__footer-link">Términos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <section class="footer-container__socials-n-rights">
+                <p class="socials-n-rights__paragraph">
+                    EDITORIAL TELEVISA S.A. DE C.V. TODOS LOS DERECHOS RESERVADOS. TBG - EDITORIAL TELEVISA - ENTERTAINMENT - NEWS
+                </p>
+
+                <section class="socials-n-rights__socials">
+                    <a href="https://es-la.facebook.com/Revista.Caras/" class="socials_n-rights__facebook-link">
+                        <ion-icon name="logo-facebook" class="facebook-link__facebook-logo"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/revistacaras/" class="socials_n-rights__instagram-link">
+                        <ion-icon name="logo-instagram" class="facebook-link__instagram-logo"></ion-icon>
+                    </a>
+                    <a href="https://x.com/carasmexico" class="socials-n-rights__x-link">
+                        <ion-icon name="logo-twitter" class="facebook-link__x-logo"></ion-icon>
+                    </a>
+                </section>
+            </section>
+        </div>
+    </footer>
+    <!--ICONOS-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
