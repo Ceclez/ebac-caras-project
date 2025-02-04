@@ -265,7 +265,10 @@ main {
                     margin-left: 3.5rem ;
                 }
                 @include width-376 {
-                    margin-left: 1.7rem ;
+                    margin-left: 4% ;
+                }
+                @include width-352 {
+                    margin-left: 0.7rem ;
                 }
                 .magazines__magazine-01 {
                     img {
@@ -368,6 +371,11 @@ main {
                     width: 100% ;
                     margin-top: -2rem ;
                     padding: 2rem ;
+                }
+                @include width-352 {
+                    width: 80% ;
+                    margin: 1.6rem ;
+                    padding: 0 ;
                 }
                 h1 {
                     @include transformarFuente (5rem, inherit, center) ;
@@ -486,6 +494,9 @@ main {
             @include width-376 {
                 padding: 4rem 2rem ;
             }
+            @include width-352 {
+                padding: 4rem 1rem ;
+            }
             h1 {
                 font-size: 1.8rem ;
                 text-transform: uppercase ;
@@ -542,6 +553,9 @@ main {
             @include width-376 {
                 padding: 4rem 2rem ;
             }
+            @include width-352 {
+                padding: 4rem 1rem ;
+            }
             h1 {
                 font-size: 1.8rem ;
                 text-transform: uppercase ;
@@ -581,6 +595,9 @@ main {
                     @include width-769 {
                         font-size: 1.6rem ;
                         padding: 2.6rem ;
+                    }
+                    @include width-352 {
+                        padding: 2rem ;
                     }
                     .person-commentary__user-data, 
                     .user-data__user-img-name {
@@ -675,6 +692,9 @@ footer {
             @include width-376 {
                 padding: 4rem 2rem ;
             }
+            @include width-352 {
+                padding: 4rem 1rem ;
+            }
             .footer-section__logo-footer {
                 padding: 2.5rem ;
                 //**----MEDIA QUERY----**//
@@ -704,6 +724,9 @@ footer {
                 }
                 @include width-376 {
                     gap: 3.6rem ;
+                }
+                @include width-352 {
+                    gap: 1.4rem;
                 }
                 div {
                     ul {
@@ -751,6 +774,9 @@ footer {
             }
             @include width-376 {
                 margin: 0 2rem ;
+            }
+            @include width-352 {
+                margin: 0 1rem ;
             }
             p {
                 color: $letrasFooter ;

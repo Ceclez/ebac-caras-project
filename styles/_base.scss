@@ -133,3 +133,7 @@ A CADA 'mixin' POR EL ANCHO DE LA PANTALLA EN QUE SE INICIARÍA SU APLICACIÓN--
 @mixin width-376 {
     @media screen and (max-width: 376px) { @content } ;
 }
+
+@mixin width-352 {
+    @media screen and (max-width: 352px) { @content } ;
+}

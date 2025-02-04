@@ -342,7 +342,12 @@ main .main__main-container .main-container__magz-titles-section .magz-titles-sec
 }
 @media screen and (max-width: 376px) {
   main .main__main-container .main-container__magz-titles-section .magz-titles-section__magazines {
-    margin-left: 1.7rem;
+    margin-left: 4%;
+  }
+}
+@media screen and (max-width: 352px) {
+  main .main__main-container .main-container__magz-titles-section .magz-titles-section__magazines {
+    margin-left: 0.7rem;
   }
 }
 main .main__main-container .main-container__magz-titles-section .magz-titles-section__magazines .magazines__magazine-01 img {
@@ -494,6 +499,13 @@ main .main__main-container .main-container__magz-titles-section .magz-titles-sec
     width: 100%;
     margin-top: -2rem;
     padding: 2rem;
+  }
+}
+@media screen and (max-width: 352px) {
+  main .main__main-container .main-container__magz-titles-section .magz-titles-section__titles-n-form {
+    width: 80%;
+    margin: 1.6rem;
+    padding: 0;
   }
 }
 main .main__main-container .main-container__magz-titles-section .magz-titles-section__titles-n-form h1 {
@@ -654,6 +666,11 @@ main .main__main-container .main-container__benefits-section {
     padding: 4rem 2rem;
   }
 }
+@media screen and (max-width: 352px) {
+  main .main__main-container .main-container__benefits-section {
+    padding: 4rem 1rem;
+  }
+}
 main .main__main-container .main-container__benefits-section h1 {
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -731,6 +748,11 @@ main .main__main-container .main-container__comments-section {
     padding: 4rem 2rem;
   }
 }
+@media screen and (max-width: 352px) {
+  main .main__main-container .main-container__comments-section {
+    padding: 4rem 1rem;
+  }
+}
 main .main__main-container .main-container__comments-section h1 {
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -783,6 +805,11 @@ main .main__main-container .main-container__comments-section .comments-section__
   main .main__main-container .main-container__comments-section .comments-section__comments-users article {
     font-size: 1.6rem;
     padding: 2.6rem;
+  }
+}
+@media screen and (max-width: 352px) {
+  main .main__main-container .main-container__comments-section .comments-section__comments-users article {
+    padding: 2rem;
   }
 }
 main .main__main-container .main-container__comments-section .comments-section__comments-users article .person-commentary__user-data,
@@ -896,6 +923,11 @@ footer .footer__footer-container .footer-container__footer-section {
     padding: 4rem 2rem;
   }
 }
+@media screen and (max-width: 352px) {
+  footer .footer__footer-container .footer-container__footer-section {
+    padding: 4rem 1rem;
+  }
+}
 footer .footer__footer-container .footer-container__footer-section .footer-section__logo-footer {
   padding: 2.5rem;
 }
@@ -934,6 +966,11 @@ footer .footer__footer-container .footer-container__footer-section .footer-secti
 @media screen and (max-width: 376px) {
   footer .footer__footer-container .footer-container__footer-section .footer-section__other-links {
     gap: 3.6rem;
+  }
+}
+@media screen and (max-width: 352px) {
+  footer .footer__footer-container .footer-container__footer-section .footer-section__other-links {
+    gap: 1.4rem;
   }
 }
 footer .footer__footer-container .footer-container__footer-section .footer-section__other-links div ul {
@@ -986,6 +1023,11 @@ footer .footer__footer-container .footer-container__socials-n-rights {
 @media screen and (max-width: 376px) {
   footer .footer__footer-container .footer-container__socials-n-rights {
     margin: 0 2rem;
+  }
+}
+@media screen and (max-width: 352px) {
+  footer .footer__footer-container .footer-container__socials-n-rights {
+    margin: 0 1rem;
   }
 }
 footer .footer__footer-container .footer-container__socials-n-rights p {
