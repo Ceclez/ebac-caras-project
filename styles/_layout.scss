@@ -431,6 +431,14 @@ main {
                     label {
                         font-size: 1.8rem ;
                         margin-bottom: 0.5rem ;
+                        display: flex ;
+                        justify-content: space-between ;
+                        align-items: center ;
+                        span {
+                            display: none ;
+                            color: $fondoBoton ;
+                            font-size: 1.4rem ;
+                        }
                     }
                     input {
                         width: 100% ;
@@ -461,6 +469,20 @@ main {
                         @include width-674 {
                             margin-top: 1.5rem;
                         }
+                    }
+                    .success-message {
+                        width: 30rem ;
+                        font-size: 1.4rem;
+                        position: fixed;
+                        top: 90%;
+                        right: 0rem;
+                        text-align: center ;
+                        justify-self: center ;
+                        padding: 1rem 0 ;
+                        color: $blancoPuro ;
+                        background: $greenBackg ;
+                        transform: translateX(101%);
+                        transition: all 300ms ease-in-out ;
                     }
                 }
             }

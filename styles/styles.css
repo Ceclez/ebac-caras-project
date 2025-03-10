@@ -588,6 +588,14 @@ main .main__main-container .main-container__magz-titles-section .magz-titles-sec
 main .main__main-container .main-container__magz-titles-section .magz-titles-section__titles-n-form form label {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .main__main-container .main-container__magz-titles-section .magz-titles-section__titles-n-form form label span {
+  display: none;
+  color: #ED1E1E;
+  font-size: 1.4rem;
 }
 main .main__main-container .main-container__magz-titles-section .magz-titles-section__titles-n-form form input {
   width: 100%;
@@ -624,6 +632,20 @@ main .main__main-container .main-container__magz-titles-section .magz-titles-sec
   main .main__main-container .main-container__magz-titles-section .magz-titles-section__titles-n-form form .form__submit {
     margin-top: 1.5rem;
   }
+}
+main .main__main-container .main-container__magz-titles-section .magz-titles-section__titles-n-form form .success-message {
+  width: 30rem;
+  font-size: 1.4rem;
+  position: fixed;
+  top: 90%;
+  right: 0rem;
+  text-align: center;
+  justify-self: center;
+  padding: 1rem 0;
+  color: #FFF;
+  background: #0ebb42;
+  transform: translateX(101%);
+  transition: all 300ms ease-in-out;
 }
 main .main__main-container .main-container__benefits-section {
   background-image: url(../img/model-image-background.webp);
