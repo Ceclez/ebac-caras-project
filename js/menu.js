@@ -38,8 +38,8 @@ form.addEventListener('submit', (event) => {
         errorEmail = document.getElementById('inputemail__error') ,
         success = document.getElementById('success-message') ;
 
-        // ↓↓ expresión regular para permitir dos palabras de a - z cada una de 3 letras
-    let regexName = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ]{3,} [a-zA-ZáéíóúÁÉÍÓÚñÑ]{3,}$/ ;
+        // ↓↓ expresión regular para permitir dos palabras de a - z cada una de 2 letras (pensando en usuarios asiáticos)
+    let regexName = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ]{2,} [a-zA-ZáéíóúÁÉÍÓÚñÑ]{2,}$/ ;
         /* ↓↓ 1. permitir palabras de a - z, números 0 - 9 y algunos símbolos
               2. '+' obligatoriamente un '@'
               3. dominios entre 'hotmail, gamil' etc
